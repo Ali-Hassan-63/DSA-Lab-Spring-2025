@@ -29,7 +29,7 @@ If you find any **errors** or want to contribute, feel free to **fork** and make
 ---
 
 ## 📬 Contact Me
-📧 **Email:** syedalijafry1963@gmail.com    
+📧 **Email:** 01-134241-041@student.bahria.edu.pk    
 🤖 **LinkedIn:** https://www.linkedin.com/in/ali-hassan-4b92b12b5/  
 
 ⭐ Don't forget to **star** this repository if you find it helpful! ⭐
