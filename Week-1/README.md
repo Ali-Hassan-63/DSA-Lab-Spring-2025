@@ -1,4 +1,4 @@
-# 📌 C++ Programming Exercises & Examples
+# 📌 Week-1 C++ Programming Exercises & Examples
 
 ## 🏆 Example 1: Maximum of Two Integers
 
