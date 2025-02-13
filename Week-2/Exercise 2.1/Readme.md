@@ -1,10 +1,10 @@
-# 📌 Example 2.1: Stack Implementation in C++
+# 📌 Exercise: Modified Stack Implementation in C++
 
 ## 📁 Files Overview
 
-1. **`stack.h` (Header File):** Defines a `Stack` class with methods for pushing, popping, and checking if the stack is full or empty.  
-2. **`stack.cpp` (Implementation File):** Implements the `Stack` class methods, handling stack operations safely without abrupt program exits.  
-3. **`main.cpp` (Driver Code):** Pushes numbers `0-19` into the stack, then pops and prints them.  
+1. **`stack.h` (Header File):** Defines a `Stack` class with methods for pushing, popping, peeking, and reversing a string.
+2. **`stack.cpp` (Implementation File):** Implements the `Stack` class methods, handling stack operations safely.
+3. **`main.cpp` (Driver Code):** Tests stack operations, including `peek()` and `reverseString()`.
 
 ## 🔧 Class & Methods
 
@@ -26,33 +26,43 @@ bool Stack::IsFull() {
 }
 ```
 
-### ➕ `push()` Method
+### 🔍 `peek()` Method
 ```cpp
-void Stack::push(int value) {
-    if (!IsFull()) {
-        data[++top] = value;
+char Stack::peek() {
+    if (!IsEmpty()) {
+        return data[top];
     } else {
-        std::cout << "Stack Overflow!" << std::endl;
+        std::cout << "Stack is empty!" << std::endl;
+        return '\0';
     }
 }
 ```
 
-### ➖ `pop()` Method
+### 🔄 `reverseString()` Function
 ```cpp
-int Stack::pop() {
-    if (!IsEmpty()) {
-        return data[top--];
-    } else {
-        std::cout << "Stack Underflow!" << std::endl;
-        return -1;
+std::string Stack::reverseString(const std::string& input) {
+    Stack stack;
+    for (char ch : input) {
+        stack.push(ch);
     }
+    
+    std::string reversed;
+    while (!stack.IsEmpty()) {
+        reversed += stack.pop();
+    }
+    return reversed;
 }
 ```
 
 ## 📤 Output
 ```
-Popped elements in reverse order (LIFO):
-19 18 17 ... 2 1 0
+Peeked Top Element: X
+Reversed String: olleH
 ```
 
-🚀 **Last In, First Out (LIFO) Principle Demonstrated!**
+🚀 **Enhancements:**
+✅ Added `peek()` to check the top element without removing it.
+✅ Implemented `reverseString()` to demonstrate string reversal using a stack.
+✅ Changed `ItemType` to `char` to support string operations.
+✅ Successfully tested both `peek()` and `reverseString()` in `main.cpp`. 🎯
+
