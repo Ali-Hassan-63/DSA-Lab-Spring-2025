@@ -11,7 +11,7 @@ This function takes user input character by character and reverses it using recu
 ### ✖️ Power Function (Example 3.3)
 This function calculates the power of a base number using recursion. If the exponent is 0, the result is 1. Otherwise, the function recursively multiplies the base by itself `N-1` times.
 
-### ⚡ Ackermann Function (Example 4)
+### ⚡ Ackermann Function (Example 3.4)
 The Ackermann function is a classic example of a highly recursive mathematical function that grows very quickly. It is defined based on two parameters, `m` and `n`, with different recursive rules depending on their values.
 
 ---
@@ -34,6 +34,4 @@ This exercise involves computing the binomial coefficient `C(n, k)`, which repre
 This function checks if a given number is prime by testing divisibility recursively. The base cases handle numbers less than 2 and direct divisibility, while the function continues checking up to `n-1`.
 
 ---
-
-🔹 *These explanations provide an overview of recursion in various mathematical and logical operations.* 🚀
 
