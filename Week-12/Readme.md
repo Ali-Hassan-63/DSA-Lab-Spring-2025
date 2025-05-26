@@ -1,87 +1,102 @@
 
-# 🧰 Binary Tree Using STL in C++
 
-This project demonstrates how to implement and manipulate a **Binary Tree** using the **Standard Template Library (STL)** in C++. STL components like `queue`, `stack`, and `vector` simplify tasks like level-order construction, iterative traversals, and data storage.
+# 🧰 General Use of STL in C++
+
+This project provides an overview and implementation examples of the **Standard Template Library (STL)** in **C++**. STL offers a rich collection of ready-to-use classes and functions for common data structures and algorithms, making C++ programming more efficient and robust.
+
+---
+
+## 📦 What is STL?
+
+The **Standard Template Library (STL)** is a powerful feature of C++ that includes:
+
+* **Containers** – Store and manage collections of data
+* **Algorithms** – Predefined functions for operations like sort, find, count, etc.
+* **Iterators** – Provide access and navigation through container elements
+* **Function Objects** – Enable customizable operations via operator overloading
 
 ---
 
 ## 📁 Project Structure
 
 ```
-STLBinaryTree/
-├── main.cpp          // Main file with STL-based binary tree operations
-└── README.md         // Documentation
+STL-Demo/
+├── main.cpp          // Sample STL code implementations
+└── README.md         // Documentation and overview
 ```
 
 ---
 
-## 🚀 Features
+## 📚 STL Components Used
 
-* ⚙️ **Binary Tree Creation** using STL `queue`
-* 🔁 **Traversals**
+### 🔹 Containers
 
-  * Level-order (BFS using `queue`)
-  * Inorder, Preorder, Postorder (recursive & stack-based)
-* 🗃️ **Use of STL Containers**
+* `vector` – Dynamic array
+* `list` – Doubly linked list
+* `deque` – Double-ended queue
+* `stack` – LIFO structure
+* `queue` – FIFO structure
+* `set` / `unordered_set` – Unique elements
+* `map` / `unordered_map` – Key-value pairs
 
-  * `queue` for level-wise construction
-  * `stack` for iterative traversals
-  * `vector` for storing results
+### 🔹 Algorithms
+
+* `sort()`
+* `reverse()`
+* `find()`
+* `count()`
+* `accumulate()` *(from `<numeric>`)*
+* `binary_search()`
+
+### 🔹 Iterators
+
+* `begin()`, `end()`
+* `rbegin()`, `rend()`
+* `auto` keyword for type deduction
 
 ---
 
-## 🧠 Concepts and STL Components Used
-
-| Concept             | STL Component         |
-| ------------------- | --------------------- |
-| Level-order build   | `queue<Node*>`        |
-| Iterative traversal | `stack<Node*>`        |
-| Data storage        | `vector<int>`         |
-| I/O Formatting      | `iostream`, `iomanip` |
-
----
-
-## 🧱 Node Structure
+## 🧠 Sample Code Snippet
 
 ```cpp
-struct Node {
-    int data;
-    Node* left;
-    Node* right;
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
-    Node(int val) {
-        data = val;
-        left = right = nullptr;
+int main() {
+    std::vector<int> nums = {5, 2, 9, 1, 3};
+    std::sort(nums.begin(), nums.end());
+
+    for (int n : nums) {
+        std::cout << n << " ";
     }
-};
+    return 0;
+}
 ```
 
 ---
 
-## 🛠️ How to Run
+## 🚀 How to Run
 
-1. Save or clone the project.
-2. Compile using:
+1. Save the code in `main.cpp`
+2. Compile with a C++ compiler:
 
    ```bash
-   g++ main.cpp -o STLBinaryTree
-   ./STLBinaryTree
+   g++ main.cpp -o stl_demo
+   ./stl_demo
    ```
-3. Input node values and see real-time tree operations with STL.
 
 ---
 
-## 📷 Sample Output
+## 🎯 Benefits of Using STL
 
-```txt
-Enter node values (use -1 for NULL): 1 2 3 -1 4 -1 -1 -1 -1
-Level-order Traversal: 1 2 3 4
-Inorder Traversal: 2 4 1 3
-```
+* ✅ Faster development with reusable components
+* 📉 Reduced risk of bugs in complex data handling
+* 🔁 Easy-to-implement sorting, searching, and other algorithms
+* 🧪 Robust and well-tested by the C++ community
 
 ---
 
-## 📦 Advantages of Using STL
+## 📄 License
 
-* ✅ Cleaner and shorter code
-* 🚀 Faster development
+This project is licensed under the [MIT License](LICENSE).
